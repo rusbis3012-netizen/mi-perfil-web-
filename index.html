@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil web | Portafolio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+   
+    <header class="encabezado">
+        <span class="subtitulo">PORTAFOLIO PERSONAL</span>
+        <h1>Mi perfil web</h1>
+        <p>Rubi Esmeralda Gonzalez Salas </p>
+    </header>
+
+   
+    <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre_mi">Sobre mí</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+
+       
+        <section id="inicio" class="seccion inicio">
+            <div class="presentacion">
+                <div class="linea-decorativa"></div>
+                <span class="etiqueta">BIENVENIDO/A A MI ESPACIO</span>
+
+                <h2>Hola, bienvenida a mi perfil</h2>
+
+                <p>
+                    Soy aprendiz de ADSO y me interesa la programación,
+                    el desarrollo de software y la creación de soluciones
+                    tecnológicas.
+                </p>
+
+                <a href="#sobre_mi" class="boton">
+                    Conoce más sobre mí
+                </a>
+            </div>
+        </section>
+
+        
+        <section id="sobre_mi" class="seccion">
+            <div class="encabezado-seccion">
+                <span class="numero">01</span>
+                <div>
+                    <h2>Sobre mí</h2>
+                    <p>Conoce un poco de mi formación y mis intereses.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta tarjeta-sobre-mi">
+                <h3>Mi perfil profesional</h3>
+                <p>
+                    Soy aprendiz de Análisis y Desarrollo de Software,
+                    dispuesta a aprender nuevas tecnologías y fortalecer
+                    mis conocimientos en programación.
+                </p>
+                <p>
+                    Tengo un nivel B1 de inglés, aprendo rápido y me
+                    interesa participar en proyectos relacionados
+                    con la tecnología.
+                </p>
+
+                <div class="dato">
+                    <span>Formación</span>
+                    <strong>Análisis y Desarrollo de Software</strong>
+                </div>
+
+                <div class="dato">
+                    <span>Inglés</span>
+                    <strong>Nivel B1</strong>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="habilidades" class="seccion">
+            <div class="encabezado-seccion">
+                <span class="numero">02</span>
+                <div>
+                    <h2>Mis habilidades</h2>
+                    <p>Conocimientos que estoy desarrollando.</p>
+                </div>
+            </div>
+
+            <div class="contenedor-tarjetas">
+
+                <article class="tarjeta tarjeta-habilidad">
+                    <span class="numero-tarjeta">01</span>
+                    <h3>HTML</h3>
+                    <p>
+                        Lenguaje de marcado para estructurar
+                        el contenido de páginas web.
+                    </p>
+                </article>
+
+                <article class="tarjeta tarjeta-habilidad">
+                    <span class="numero-tarjeta">02</span>
+                    <h3>CSS</h3>
+                    <p>
+                        Diseño visual, estilos y distribución
+                        de elementos en páginas web.
+                    </p>
+                </article>
+
+                <article class="tarjeta tarjeta-habilidad">
+                    <span class="numero-tarjeta">03</span>
+                    <h3>SQL</h3>
+                    <p>
+                        Consultas, organización y gestión
+                        de bases de datos.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+       
+        <section id="proyectos" class="seccion">
+            <div class="encabezado-seccion">
+                <span class="numero">03</span>
+                <div>
+                    <h2>Mis proyectos</h2>
+                    <p>Experiencias de aprendizaje y desarrollo.</p>
+                </div>
+            </div>
+
+            <article class="tarjeta tarjeta-proyecto">
+                <div class="proyecto-cabecera">
+                    <span class="etiqueta">PROYECTO ACADÉMICO</span>
+                    <span class="proyecto-numero">01 / 01</span>
+                </div>
+
+                <h3>Wipacer ERP</h3>
+
+                <p>
+                    Wipacer es un sistema de gestión empresarial que busca
+                    integrar procesos como inventarios, compras,
+                    facturación y administración en una sola plataforma.
+                    Esta desarrollado en 
+                </p>
+                <section id="proyectos" class="proyectos">
+  
+<div class="carrusel-wipacer">
+    <button class="flecha-carrusel" onclick="moverImagen(-1)">&#10094;</button>
+
+    <div class="ventana-carrusel">
+        <div class="lista-imagenes" id="listaImagenes">
+            <img src="img copy/Inicio.png" alt="Inicio de Wipacer">
+            <img src="img copy/login.png" alt="Inicio de sesión">
+            <img src="img copy/Registro.png" alt="Registro de usuarios">
+            <img src="img copy/Panel.png" alt="Panel de Wipacer">
+            <img src="img copy/Características.png" alt="Características">
+            <img src="img copy/planes.png" alt="Planes">
+            <img src="img copy/Preguntas.png" alt="Preguntas frecuentes">
+            <img src="img copy/info.png" alt="Información">
+            <img src="img copy/final.png" alt="Pantalla final">
+        </div>
+    </div>
+
+    <button class="flecha-carrusel" onclick="moverImagen(1)">&#10095;</button>
+</div>
+
+<script>
+    let imagenActual = 0;
+
+    function moverImagen(direccion) {
+        const lista = document.getElementById("listaImagenes");
+        const total = lista.children.length;
+
+        imagenActual = (imagenActual + direccion + total) % total;
+        lista.style.transform = `translateX(-${imagenActual * 100}%)`;
+    }
+</script>
+
+</section>
+
+                <div class="etiquetas">
+                    <span>Gestión empresarial</span>
+                    <span>Desarrollo de software</span>
+                    <span>Bases de datos</span>
+                </div>
+            </article>
+        </section>
+
+     
+        <section id="contacto" class="seccion">
+            <div class="encabezado-seccion">
+                <span class="numero">04</span>
+                <div>
+                    <h2>Contacto</h2>
+                    <p>Conectemos a través de la tecnología.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta tarjeta-contacto">
+                <div class="icono-correo">@</div>
+                <h3>¿Hablamos?</h3>
+                <p>
+                    Puedes comunicarte conmigo por correo electrónico
+                    para conversar sobre temas tecnológicos.
+                </p>
+
+                <a class="boton"
+                   href="mailto:rusbis3012@gmail.com">
+                    rusbis3012@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <h3>Mi perfil web</h3>
+        <p>Aprendiz de ADSO · SENA</p>
+        <div class="separador"></div>
+        <small>© 2026 · Aprendiendo y construyendo mi futuro.</small>
+    </footer>
+
+</body>
+</html>
+
